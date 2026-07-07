@@ -1,0 +1,54 @@
+package com.example.uasroom.entity;
+
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "matakuliah")
+public class MataKuliah {
+
+    @PrimaryKey(autoGenerate = true)
+    private int id;
+
+    private String tipe;
+    private String kodeMK;
+    private String namaMK;
+
+    public MataKuliah(String tipe, String kodeMK, String namaMK) {
+        this.tipe = tipe;
+        this.kodeMK = kodeMK;
+        this.namaMK = namaMK;
+    }
+
+    // Getter & Setter
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getTipe() {
+        return tipe;
+    }
+
+    public void setTipe(String tipe) {
+        this.tipe = tipe;
+    }
+
+    public String getKodeMK() {
+        return kodeMK;
+    }
+
+    public void setKodeMK(String kodeMK) {
+        this.kodeMK = kodeMK;
+    }
+
+    public String getNamaMK() {
+        return namaMK;
+    }
+
+    public void setNamaMK(String namaMK) {
+        this.namaMK = namaMK;
+    }
+}
